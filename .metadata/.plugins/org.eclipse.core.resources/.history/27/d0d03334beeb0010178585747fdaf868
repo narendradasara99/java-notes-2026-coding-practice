@@ -1,0 +1,17 @@
+package com.DefaultmethodsInInterface;
+
+import java.util.ArrayList;
+
+public class Test {
+	public static void main(String[] args) {
+	
+		ArrayList<Integer> a = new ArrayList<>();
+		a.add(1);
+		a.add(9);
+		a.add(11);
+		a.add(5);
+		a.stream().map(l->l*2).forEach(p->System.out.println(p));
+		
+
+	}
+}

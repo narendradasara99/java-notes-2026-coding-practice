@@ -1,0 +1,29 @@
+package com.nare;
+
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+public class Ex {
+
+	public static void main(String[] args) {
+
+		Consumer c=(a)->System.out.println(a);
+		c.accept(19);
+		
+		
+		Supplier s= ()-> 10;
+		Object object = s.get();
+		System.out.println(object);
+		
+		Predicate<Integer> p= a->(a<10);
+		boolean test = p.test(1);
+		System.out.println(test);
+		
+		Function<Integer,Double> f= a-> a/2.0;
+		Double apply = f.apply(10);
+		System.out.println(apply);
+		
+	}
+}

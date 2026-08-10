@@ -1,0 +1,54 @@
+package com.nare;
+
+public class Movie implements Comparable<Movie> {
+
+	String name;
+	Double rating;
+	int year;
+
+	// Implementation of the compareTo method for default sorting by year
+
+	@Override
+	public int compareTo(Movie o) {
+		// Sort movies in ascending order of year
+
+		return this.year - o.year;
+	}
+
+	@Override
+	public String toString() {
+		return "Movie [name=" + name + ", rating=" + rating + ", year=" + year + "]";
+	}
+
+	public Movie(String name, Double rating, int year) {
+		super();
+		this.name = name;
+		this.rating = rating;
+		this.year = year;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getRating() {
+		return rating;
+	}
+
+	public void setRating(Double rating) {
+		this.rating = rating;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.nare;
+
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+public class Ex {
+	
+	public static String getName() {
+		return "Narendra";
+	}
+
+	public static void main(String[] args) {
+
+	
+		
+	}
+}

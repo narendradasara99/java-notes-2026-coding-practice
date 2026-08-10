@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy Project &apos;25MS-Spring-Security-Db-Role&apos;" description="Copy Project &apos;25MS-Spring-Security-Db-Role&apos;" destination="D:/java" element="/25MS-Spring-Security-Db-Role" flags="7" id="org.eclipse.ltk.core.refactoring.copyproject.resource" name="26MS-Spring-Security-JWT" stamp="1770016087018"/>
+</session>

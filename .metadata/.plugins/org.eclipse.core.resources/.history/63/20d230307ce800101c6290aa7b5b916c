@@ -1,0 +1,22 @@
+package com.nare;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+public class Ex {
+	public static void main(String[] args) {
+
+		ArrayList<Movie> l = new ArrayList<>();
+		l.add(new Movie("Star Wars", 8.7, 1977));
+		l.add(new Movie("Empire Strikes Back", 8.8, 1980));
+		l.add(new Movie("Return of the Jedi", 8.4, 1983));
+
+		Collections.sort(l);
+
+		for (Movie m : l) {
+			System.out.println(m);
+		}
+
+	}
+}

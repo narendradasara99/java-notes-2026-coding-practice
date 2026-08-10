@@ -1,0 +1,36 @@
+package com.DefaultmethodsInInterface;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		HashMap h = new ;
+		h.put("narendra", 1);
+		
+		
+		
+		h.put("Yash", 1);
+		 
+		
+		Collections.synchronizedList(null);
+		
+	
+
+		System.out.println(h);
+		Iterator<Entry<String, Integer>> iterator = h.entrySet().iterator();
+
+		while (iterator.hasNext()) {
+			if (iterator.next().getKey() == "narendra")
+				iterator.remove();
+			System.out.println(iterator.next().getKey());
+		}
+
+		System.out.println(h);
+	}
+}

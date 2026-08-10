@@ -1,0 +1,32 @@
+package com.nare;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Customer {
+
+	int amount = 100;
+
+	public synchronized void withdraw(int a) throws InterruptedException {
+
+		if (amount < a) {
+			wait();
+
+		}else {
+			amount=amount-a;
+			System.out.println(amount);
+		}
+	}
+	
+	public synchronized void deposit(int a) {
+		
+		amount=amount+a;
+		
+		System.out.println(a+" deposited");
+		System.out.println("after deposit amount"+amount);
+		 notify();
+	}
+
+	
+	
+}

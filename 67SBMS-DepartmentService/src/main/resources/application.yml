@@ -1,0 +1,33 @@
+#
+#resilience4j:
+#  ratelimiter:
+#    instances:
+#      paymentService:
+#        limitForPeriod: 5
+#        limitRefreshPeriod: 10s
+#
+#
+#  retry:
+#    instances:
+#      paymentService:
+#        maxAttempts: 3
+#        waitDuration: 2s
+
+spring:
+  application:
+    name: 67SBMS-DepartmentService
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+
+
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

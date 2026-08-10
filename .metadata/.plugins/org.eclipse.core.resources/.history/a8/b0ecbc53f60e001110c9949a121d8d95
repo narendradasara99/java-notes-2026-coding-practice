@@ -1,0 +1,12 @@
+package com.ImmutableEx;
+
+import java.time.LocalDate;
+
+public class test {
+	
+	public static void main(String[] args) {
+		Employee employee = new Employee("naren", 1, LocalDate.now());
+		System.out.println(employee);
+	}
+
+}

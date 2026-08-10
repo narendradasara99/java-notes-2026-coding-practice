@@ -1,0 +1,60 @@
+package com.DefaultmethodsInInterface;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+import java.util.Map.Entry;
+import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class Test {
+	public static void main(String[] args) {
+
+		List<Integer> asList = Arrays.asList(1, 2, 2, 3, 90, 8, 9, 20, 4, 5, 8, 6);
+		//collect
+		Set<Integer> collect = asList.stream().collect(Collectors.toSet());
+		System.out.println(collect);
+		
+		//forEach
+		asList.stream().forEach(a->System.out.println(a));
+		
+		//reduce
+		asList.stream().reduce((a,b)->(a+b)).ifPresent(System.out::println);
+		Integer reduce = asList.stream().reduce(0,(a,b)->a+b);
+		System.out.println(reduce);
+		
+		//count
+		long count = asList.stream().count();
+		System.out.println("count = "+count);
+		
+		//min max
+		Optional<Integer> min2 = asList.stream().min(Integer::compare);
+		Optional<Integer> min = asList.stream().min(Comparator.naturalOrder());
+		System.out.println("min ="+min.get());
+		
+		//max
+		
+		Integer max = asList.stream().max(Integer::compare).get();
+		Integer integer = asList.stream().max((c1,c2)->c1<c2?1:-1).get();
+		System.out.println("max ="+max);
+		
+		//anymatch
+		
+		boolean anyMatch = asList.stream().anyMatch(a->a<1);
+		System.out.println(anyMatch);
+
+		
+		
+		
+
+	}
+}

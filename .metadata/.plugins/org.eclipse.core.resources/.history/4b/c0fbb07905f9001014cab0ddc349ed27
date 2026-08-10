@@ -1,0 +1,2 @@
+spring.application.name=12SBMS-Actuators
+management.endpoints.web.exposure.include=*

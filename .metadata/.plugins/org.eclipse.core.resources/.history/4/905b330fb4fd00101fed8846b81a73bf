@@ -1,0 +1,16 @@
+
+public class Singleton {
+	
+	private static final Singleton instance=null;
+
+	private Singleton() {
+		super();
+	}
+	
+	public static Singleton getInstance() {
+		if(instance==null)
+		return new Singleton();
+	}
+	
+
+}

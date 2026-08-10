@@ -1,0 +1,17 @@
+package com.DefaultmethodsInInterface;
+
+import java.util.ArrayList;
+
+public class Test {
+	public static void main(String[] args) {
+	
+		ArrayList<Object> a = new ArrayList<>();
+		a.add(1);
+		a.add(9);
+		a.add(11);
+		a.add(5);
+		a.stream().map(a->a*2);
+		
+
+	}
+}

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: 68SBMS-API-Gateway
+  cloud:
+    gateway:
+      routes:
+
+        - id: emp-service
+          uri: lb://66SBMS-EmployeeService
+          predicates:
+            - Path=/emp/**
+        - id: dept-service
+          uri: lb://67SBMS-DepartmentService
+          predicates:
+            - Path=/dept/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 9090

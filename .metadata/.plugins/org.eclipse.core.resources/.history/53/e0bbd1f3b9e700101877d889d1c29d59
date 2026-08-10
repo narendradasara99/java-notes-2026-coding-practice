@@ -1,0 +1,22 @@
+package com.nare;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Ex {
+
+	public static void main(String[] args) {
+		
+		Customer c = new Customer();
+		
+		new Thread(()->{
+			try {
+				c.withdraw(1999);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}).start();
+
+	}
+}
