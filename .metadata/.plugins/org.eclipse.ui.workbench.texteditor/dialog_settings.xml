@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<section name="java.lang.Class">
 		<list key="findhistory">
+			<item value="equals"/>
+			<item value="toString"/>
 		</list>
 	</section>
 </section>
